@@ -44,7 +44,7 @@ function calc(){
         document.getElementById('resultColor').style.color='#ffffff';
         resultColor.innerHTML = "Ожирение 3 степени"
     }
-    index = index.toFixed(2);
+    index = index.toFixed(1);
     resultPlace.innerHTML = index;
     
 }
