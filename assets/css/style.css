@@ -1,0 +1,26 @@
+.container2 {
+    width: 80vw;
+    margin: auto;
+}
+.buttonStyle{
+    width: 100%;
+}
+#resultColor {
+    display: none;
+    text-align: center;
+    background: blue;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .container2 {
+        width: 40vw;
+        margin: auto;
+    }
+    
+}
