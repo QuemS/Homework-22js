@@ -2,7 +2,7 @@
 
 
 function calc(){
-    document.getElementById('resultColorAndText').style.display='block';
+   
     let growth = +growthInput.value;
     let massa = +massaInput.value;
     let index = 0;
@@ -48,6 +48,7 @@ function calc(){
         colorText ='#ffffff';
         resultText = "Ожирение 3 степени"
     }
+    document.getElementById('resultColorAndText').style.display='block';
     document.getElementById('resultColorAndText').style.background = colorBG;
     document.getElementById('resultColorAndText').style.color = colorText;
     resultColorAndText.innerHTML = resultText;
