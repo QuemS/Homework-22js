@@ -5,7 +5,7 @@
 .buttonStyle{
     width: 100%;
 }
-#resultColor {
+#resultColorAndText {
     display: none;
     text-align: center;
     background: blue;

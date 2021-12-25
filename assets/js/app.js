@@ -2,9 +2,12 @@
 
 
 function calc(){
-    document.getElementById('resultColor').style.display='block';
+    document.getElementById('resultColorAndText').style.display='block';
     let growth = +growthInput.value;
     let massa = +massaInput.value;
+    let index = 0;
+    let colorBG, colorText, resultText;
+    
     
     if (growth < 3 ) {
         index = massa / (growth ** 2);
@@ -14,36 +17,41 @@ function calc(){
 
     }
    
-   
+    
+    
     if(index <= 16){
-        document.getElementById('resultColor').style.background='blue';
-        document.getElementById('resultColor').style.color='#ffffff';
-        resultColor.innerHTML = "Выраженный дефицит массы тела"
+        colorBG ='blue';
+        colorText ='#ffffff';
+        resultText = "Выраженный дефицит массы тела"
     }else if((index > 16)&&(index <= 18.5)){
-        document.getElementById('resultColor').style.background='#04B4AE';
-        document.getElementById('resultColor').style.color='#ffffff';
-        resultColor.innerHTML = "Недостаточная (дефицит) масса тела"
+        colorBG ='#04B4AE';
+        colorText ='#ffffff';
+        resultText = "Недостаточная (дефицит) масса тела"
     }else if((index > 18.5)&&(index <= 25)){
-        document.getElementById('resultColor').style.background='green';
-        document.getElementById('resultColor').style.color='#ffffff';
-        resultColor.innerHTML = "Норма"
+        colorBG ='green';
+        colorText ='#ffffff';
+        resultText = "Норма"
     }else if((index > 25)&&(index <= 30)){
-        document.getElementById('resultColor').style.background='greenyellow';
-        document.getElementById('resultColor').style.color='black';
-        resultColor.innerHTML = "Избыточная масса тела (предожирение)"
+        colorBG ='greenyellow';
+        colorText ='black';
+        resultText = "Избыточная масса тела (предожирение)"
     }else if((index > 30)&&(index <= 35)){
-        document.getElementById('resultColor').style.background='yellow';
-        document.getElementById('resultColor').style.color='black';
-        resultColor.innerHTML = "Ожирение 1 степени"
+        colorBG ='yellow';
+        colorText ='black';
+        resultText = "Ожирение 1 степени"
     }else if((index > 35)&&(index <= 40)){
-        document.getElementById('resultColor').style.background='orange';
-        document.getElementById('resultColor').style.color='black';
-        resultColor.innerHTML = "Ожирение 2 степени"
+        colorBG ='orange';
+        colorText ='black';
+        resultText = "Ожирение 2 степени"
     }else if(index >= 40){
-        document.getElementById('resultColor').style.background='red';
-        document.getElementById('resultColor').style.color='#ffffff';
-        resultColor.innerHTML = "Ожирение 3 степени"
+        colorBG ='red';
+        colorText ='#ffffff';
+        resultText = "Ожирение 3 степени"
     }
+    document.getElementById('resultColorAndText').style.background = colorBG;
+    document.getElementById('resultColorAndText').style.color = colorText;
+    resultColorAndText.innerHTML = resultText;
+
     index = index.toFixed(1);
     resultPlace.innerHTML = index;
     
